@@ -24,4 +24,4 @@ export const segmentNames = {
     rep: 'Republican',
     unknown_sex: 'Unknown Sex',
     white: 'White'
-}
+};

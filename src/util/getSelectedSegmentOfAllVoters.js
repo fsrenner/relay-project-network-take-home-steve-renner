@@ -21,5 +21,5 @@ export default function getSelectedSegmentOfAllVoters(segment, arr) {
         name: segmentNames[segment],
         count: segmentTotal,
         percent: `${((segmentTotal/total) * 100).toFixed(2)}%`
-    }
+    };
 };

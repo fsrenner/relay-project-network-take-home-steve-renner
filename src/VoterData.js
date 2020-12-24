@@ -27,6 +27,10 @@ export default function VoterData() {
         percent: ''
     });
     
+    /**
+     * the fetchVoterData function fetches the voter data and sets the voter data state,
+     * the top segment of all voters state, and the selected segment of all voters state.
+     */
     async function fetchVoterData() {
         const response = await fetch(VOTER_DATA_URL);
         const data = await response.json();
@@ -39,6 +43,14 @@ export default function VoterData() {
         fetchVoterData();
     }, []);
 
+    /**
+     * The handleSegmentChange function is the onchange handler for the select in the Summary
+     * component. It is fired when the user makes a change in the selection of segment data 
+     * for desired display. This onchange updates the state of the segment, selected segment
+     * of all voters, and voter data with the percentages.
+     * 
+     * @param {*} e - the event object 
+     */
     const handleSegmentChange = (e) => {
         setSegment(e.target.value);
         setSelectedSegmentOfAllVoters(getSelectedSegmentOfAllVoters(e.target.value, voterData));
@@ -55,5 +67,5 @@ export default function VoterData() {
             />
             <DisplayTable voterData={voterData} />
         </>
-    )
+    );
 }
