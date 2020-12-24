@@ -1,5 +1,5 @@
 import React from 'react';
-import { testData } from './util/testData';
+// import { testData } from './util/testData'; // This populates the table with test data
 
 /**
  * The DisplayTable function receives voter data from the VoterData
