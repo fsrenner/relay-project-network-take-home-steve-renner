@@ -24,7 +24,7 @@ export default function DisplayTable({ voterData }) {
                     <th>White</th>
                     <th>Other Race</th>
                     <th>Total</th>
-                    <th>%</th>
+                    {voterData.length > 0 && voterData[0].percent && <th>%</th>}
                 </tr>
             </thead>
             <tbody>
@@ -44,7 +44,7 @@ export default function DisplayTable({ voterData }) {
                             <td>{item.white}</td>
                             <td>{item.other_race}</td>
                             <td>{item.total}</td>
-                            <td>TBD</td>
+                            {item.percent && <td>{item.percent}</td>}
                         </tr>
                     )
                 })
