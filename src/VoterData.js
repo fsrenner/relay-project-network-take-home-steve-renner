@@ -13,15 +13,13 @@ export default function VoterData() {
         count: 0,
         percent: 0
     });
-
+    
     async function fetchVoterData() {
         const response = await fetch(VOTER_DATA_URL);
         const data = await response.json();
         setVoterData(data.rows);
-        const topSegment = getTopSegmentOfAllVoters(voterData);
-        setTopSegmentOfAllVoters(topSegment);
+        setTopSegmentOfAllVoters(getTopSegmentOfAllVoters(data.rows))
     }
-    
     useEffect(() => {
         fetchVoterData();
     }, []);

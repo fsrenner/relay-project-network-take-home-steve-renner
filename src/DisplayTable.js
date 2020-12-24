@@ -5,7 +5,7 @@ import React from 'react';
  * The DisplayTable function receives voter data from the VoterData
  * parent component and populates a table with it.
  * 
- * @param {array[object]} voterData - A prop array of voter data objects
+ * @param {object[]} voterData - A prop array of voter data objects
  */
 export default function DisplayTable({ voterData }) {
     return (
