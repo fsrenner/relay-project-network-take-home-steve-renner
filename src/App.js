@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Summary from './Summary';
-import DisplayTable from './DisplayTable';
+import VoterData from './VoterData';
 
 export default function App() {
   return (
@@ -10,8 +9,7 @@ export default function App() {
         <h1>Philadelphia Qualified Voter Listing 2018</h1>
       </header>
       <main>
-        <Summary top="Female"/>
-        <DisplayTable />
+        <VoterData />
       </main>
       <footer>
       </footer>

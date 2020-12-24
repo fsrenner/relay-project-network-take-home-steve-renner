@@ -1,7 +1,13 @@
 import React from 'react';
 import { testData } from './util/testData';
 
-export default function DisplayTable() {
+/**
+ * The DisplayTable function receives voter data from the VoterData
+ * parent component and populates a table with it.
+ * 
+ * @param {array[object]} voterData - A prop array of voter data objects
+ */
+export default function DisplayTable({ voterData }) {
     return (
         <table>
             <thead>
@@ -23,7 +29,7 @@ export default function DisplayTable() {
             </thead>
             <tbody>
             {
-                testData.map((item, key) => {
+                voterData.map((item, key) => {
                     return (
                         <tr key={key}>
                             <td>{item.ward}</td>
