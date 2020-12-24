@@ -5,6 +5,10 @@ import getTopSegmentOfAllVoters from './util/getTopSegmentOfAllVoters';
 
 const VOTER_DATA_URL = 'https://phl.carto.com/api/v2/sql?q=SELECT+*+FROM+qualified_voter_listing_2018_primary_by_ward&filename=qualified_voter_listing_2018_primary_by_ward&format=json&skipfields=cartodb_id';
 
+/**
+ * This function is a container component used to fetch data, manipulate it, and pass it
+ * to the child components for rendering.
+ */
 export default function VoterData() {
 
     const [voterData, setVoterData] = useState([]);
