@@ -29,6 +29,6 @@ export default function getTopSegmentOfAllVoters(arr) {
     return {
         name: sortedSegmentTotals[0].name,
         count: sortedSegmentTotals[0].count,
-        percent: ((sortedSegmentTotals[0].count/total) * 100).toFixed(2)
+        percent: `${((sortedSegmentTotals[0].count/total) * 100).toFixed(2)}%`
     };
 }

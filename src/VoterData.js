@@ -17,6 +17,7 @@ export default function VoterData() {
         count: 0,
         percent: 0
     });
+    const [segment, setSegment] = useState(''); 
     
     async function fetchVoterData() {
         const response = await fetch(VOTER_DATA_URL);
@@ -28,11 +29,11 @@ export default function VoterData() {
         fetchVoterData();
     }, []);
 
-
-
+    const handleSegmentChange = (e) => setSegment(e.target.value)
+    console.log(segment);
     return(
         <>
-            <Summary topSegmentOfAllVoters={topSegmentOfAllVoters}/>
+            <Summary topSegmentOfAllVoters={topSegmentOfAllVoters} handleSegmentChange={handleSegmentChange}/>
             <DisplayTable voterData={voterData} />
         </>
     )
