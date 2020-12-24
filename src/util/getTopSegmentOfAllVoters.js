@@ -7,7 +7,7 @@ import { segments, segmentNames } from './segmentConfigs';
  * with the count and the percent of total votes.
  * 
  * @param {object[]} arr - An array of voter data objects
- * @returns {object} - An object containing the segment, name, and percent of total
+ * @returns {object} - An object containing the name, count, and percent of total
  */
 export default function getTopSegmentOfAllVoters(arr) {
     // Calculate the total number of voters
